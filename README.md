@@ -1,37 +1,63 @@
-## Welcome to GitHub Pages
+Eventually by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
-You can use the [editor on GitHub](https://github.com/i1mhere/athere/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Just a simple placeholder template for your kickass app/product/startup/whatever until it
+launches. Includes an email signup form and a cool slideshow background (more on both below).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Demo images\* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
+you can use for pretty much whatever.
 
-### Markdown
+(\* = not included)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+AJ
+aj@lkn.io | @ajlkn
 
-```markdown
-Syntax highlighted code block
+Signup Form:
 
-# Header 1
-## Header 2
-### Header 3
+    The signup form won't actually do anything (other than report back with a "thank you" message)
+    until you tie it to either a third party service (eg. MailChimp) or your own hosted solution.
+    In either case, there are two ways to go:
 
-- Bulleted
-- List
+    1. The conventional (non-AJAX) way, which pretty much comes down to pointing the form's "action"
+    attribute to your service/script URL. If you go this route, remove the entire "Signup Form" code
+    block from assets/js/main.js (since it's not needed for this approach).
 
-1. Numbered
-2. List
+    -or-
 
-**Bold** and _Italic_ and `Code` text
+    2. The AJAX way. How you set this up is largely dependent on the service/solution you're using
+    so you'll need to consult their/its documentation. However, I have included some basic code
+    (under "Signup Form" in assets/js/main.js) that will at least let you interact with the
+    form itself.
 
-[Link](url) and ![Image](src)
-```
+Slideshow Background:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+    This is pretty straightforward, but there are two JS settings you'll want to be aware of
+    (found under "Slideshow Background" in assets/js/main.js):
 
-### Jekyll Themes
+    images
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/i1mhere/athere/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    	The list of images to cycle through, given in the following format:
 
-### Support or Contact
+    		'url': 'alignment'
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    	Where 'url' is the image (eg. 'images/foo.jpg', 'http://somewhere.else/foo.jpg'), and
+    	'alignment' is how the image should be vertically aligned ('top', 'center', or 'bottom').
+
+    	Note: Browsers that don't support CSS transitions (like IE<=9) will only see the first image.
+
+    delay
+
+    	How long to wait between transitions (in ms). Note that this must be at least twice as long as
+    	the transition speed itself (currently 3 seconds).
+
+Credits:
+
+    Demo Images:
+    	Unsplash (unsplash.com)
+
+    Icons:
+    	Font Awesome (fontawesome.io)
+
+    Other:
+    	Responsive Tools (github.com/ajlkn/responsive-tools)
